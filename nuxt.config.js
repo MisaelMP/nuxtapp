@@ -34,6 +34,8 @@ module.exports = {
     plugins: [
         '~/plugins/vue-resource',
         '~/plugins/directives',
+        '~/plugins/filters'
+
 
     ],
 
