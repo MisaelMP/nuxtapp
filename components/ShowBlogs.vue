@@ -13,16 +13,17 @@
 import Search from "~/components/Search.vue";
 
 export default {
-  components: {
-    Search
-  },
+	components: {
+		Search
+	},
   data() {
     return {
-      blogs: [],
-      search: ""
+	  blogs: [],
+	  search: ''
     };
   },
   methods: {},
+
   computed: {
     filteredBlogs: function() {
       return this.blogs.filter(blog => {

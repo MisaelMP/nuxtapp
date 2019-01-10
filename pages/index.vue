@@ -1,5 +1,6 @@
 <template>
   <div>
+    <navigation/>
     <carousel/>
     <section class="container content">
       <div>
@@ -11,9 +12,6 @@
         </div>
       </div>
     </section>
-    <blog></blog>
-    <navigation/>
-	<show-blogs></show-blogs>
   </div>
 </template>
 

@@ -24,9 +24,9 @@
         </div>
       </div>
     </form>
-	<div v-if="submitted">
-		<h3>Thanks for adding your post</h3>
-	</div>
+    <div v-if="submitted">
+      <h3>Thanks for adding your post</h3>
+    </div>
     <div class="blog__preview">
       <h3 class="blog__subtitle">Preview Blog</h3>
       <p>Blog title: {{ blog.title }}</p>
@@ -34,7 +34,7 @@
       <p>{{ blog.content }}</p>
       <p>Blog Categories:</p>
       <ul>
-        <li v-for="category in blog.categories" :key="category.id">:{{ category }}</li>
+        <li v-for="category in blog.categories" :key="category.id">{{ category }}</li>
       </ul>
       <p>Author: {{blog.author }}</p>
     </div>
@@ -51,20 +51,22 @@ export default {
         categories: [],
         author: ""
       },
-	  authors: ["The cochi cui", "Brian Eno", "George Bataille"],
-	  submitted: false
+      authors: ["The cochi cui", "Brian Eno", "George Bataille"],
+      submitted: false
     };
   },
   methods: {
-    post:function() {
-      this.$http.post("https://jsonplaceholder.typicode.com/posts", {
-		title: this.blog.title,
-		body: this.blog.content,
-		userId: 1
-      }).then(function(data) {
-		  console.log(data);
-		  this.submitted = true;
-	  });
+    post: function() {
+      this.$http
+        .post("https://jsonplaceholder.typicode.com/posts", {
+          title: this.blog.title,
+          body: this.blog.content,
+          userId: 1
+        })
+        .then(function(data) {
+          console.log(data);
+          this.submitted = true;
+        });
     }
   }
 };
